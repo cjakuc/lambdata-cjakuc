@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from scipy import stats
 
 # An example function
+
+
 def enlarge(n):
     """
     Param n is a number
@@ -13,7 +15,8 @@ def enlarge(n):
     """
     return n * 100
 
-def train_val_test_split(df,random_state=42):
+
+def train_val_test_split(df, random_state=42):
     """
     Param df is a dataframe
     Function will retun a train, validate, test split with default sizes
@@ -23,13 +26,13 @@ def train_val_test_split(df,random_state=42):
 
     return train, val, test
 
-def chi_2_report(df,a,b):
+
+def chi_2_report(df, a, b):
     """
     Param df is a dataframe
     Param a is a categorical variable
     Param b is a categorical variable
     Function will return a contingnecy table and a chi squared test
     """
-    contingency_table = pd.crosstab(df[a],df[b])
+    contingency_table = pd.crosstab(df[a], df[b])
     return contingency_table, stats.chi2_contingency(contingency_table)
-    
