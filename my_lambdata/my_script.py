@@ -28,12 +28,4 @@ df_fancy.generate_data(rows_to_add=2)
 # Check the shape to see if it changed correctly
 print(df_fancy.df.shape)
 
-# list1 = []
-# for i in range(0, len(df.columns)):
-#     list1.append([])
-# list1 = [[],[]]
-# list1[0].append(0)
-# list1[0].append(1)
-# list1[1].append(2)
-# list1[1].append(3)
-# print(list1)
+
