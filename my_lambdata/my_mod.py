@@ -26,8 +26,10 @@ class Df_fancy():
         Param rows_to_add is an int that specifies the new number of rows to add
         """
         rows = []
-        for i in range(0, len(self.df.columns) - 1):
+        i = 0
+        while i < len(self.df.columns):
             rows.append([])
+            i += 1
         for row in range(0, rows_to_add):
             for col in self.df.columns.tolist():
                 rows[row].append(

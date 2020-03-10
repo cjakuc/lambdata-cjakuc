@@ -11,6 +11,7 @@ autopep8 = "*"
 pandas = "*"
 sklearn = "*"
 scipy = "*"
+numpy - "*"
 
 [requires]
 python_version = "3.7"
