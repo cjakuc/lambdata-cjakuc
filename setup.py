@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="cjakuc-lambdata-cjakuc",
-    version="1.0",
+    version="1.1",
     author="Chris Jakuc",
     author_email="chris.jakuc@gmail.com",
     description="Learning how to create a package",
