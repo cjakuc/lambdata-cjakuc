@@ -12,9 +12,9 @@ import pandas as pd
 # print("Enlarged number", enlarge(x))
 
 # Test the generate_data function
-df = pd.DataFrame(data={'target':[0,1,1,1,0,0,0,1,0,1],
-                        'cat1':['a','b','c','d','e','f','g','h','i','j'],
-                        'cat2':['1','2','3','4','5','6','7','8','9','10']})
+df = pd.DataFrame(data={'target': [0, 1, 1, 1, 0, 0, 0, 1, 0, 1],
+                        'cat1': ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
+                        'cat2': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']})
 
 # Instantiate an instance of Df_fancy
 df_fancy = Df_fancy(df)
