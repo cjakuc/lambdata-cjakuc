@@ -8,39 +8,38 @@ import numpy as np
 import random
 
 
-class Df_fancy():
-
-    def __init__(self, df):
-        self.df = df
+class DfFancy(pd.DataFrame):
 
     def set_train_val_test(self, random_state=42):
         """
         Returns train, validation, and test sets
         """
-        train, test = train_test_split(self.df, random_state=random_state)
+        train, test = train_test_split(self, random_state=random_state)
         train, val = train_test_split(train, random_state=random_state)
         return train, val, test
 
     def generate_data(self, rows_to_add, random_state=42):
         """
         Param rows_to_add is an int that specifies the new number of rows to add
+        Returns the new dataframe w/ the added data. Also changes the original self.df
         """
         rows = []
         i = 0
-        while i < len(self.df.columns):
+        while i < (len(self.columns)-1):
             rows.append([])
             i += 1
         for row in range(0, rows_to_add):
-            for col in self.df.columns.tolist():
+            for col in self.columns.tolist():
                 rows[row].append(
                     random.choices(
                         np.unique(
-                            self.df[col]).tolist()))
+                            self[col]).tolist()))
         temp_df = pd.DataFrame(rows, columns=['target', 'cat1', 'cat2'])
-        print(self.df.head())
+        print(self.head())
         print(temp_df.head())
-        self.df = pd.concat([self.df, temp_df])
-        return self.df
+        self = pd.concat([self, temp_df])
+        print(self.tail())
+        return self
 
     # def set_chi_2_report(self, cat1, cat2):
     #     """
