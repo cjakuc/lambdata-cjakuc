@@ -35,10 +35,10 @@ class DfFancy(pd.DataFrame):
                         np.unique(
                             self[col]).tolist()))
         temp_df = pd.DataFrame(rows, columns=['target', 'cat1', 'cat2'])
-        print(self.head())
-        print(temp_df.head())
+        # print(self.head())
+        # print(temp_df.head())
         self = pd.concat([self, temp_df])
-        print(self.tail())
+        # print(self.tail())
         return self
 
     # def set_chi_2_report(self, cat1, cat2):

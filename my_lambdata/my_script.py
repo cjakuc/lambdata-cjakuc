@@ -1,7 +1,7 @@
 
 # mylambdata/my_script.py
 
-from my_mod import enlarge, DfFancy
+from my_lambdata.my_mod import enlarge, DfFancy
 import pandas as pd
 
 # print("Hello World")

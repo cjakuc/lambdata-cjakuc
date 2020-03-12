@@ -6,12 +6,13 @@ verify_ssl = true
 [dev-packages]
 twine = "*"
 autopep8 = "*"
+pytest = "*"
 
 [packages]
 pandas = "*"
-sklearn = "*"
+scikit-learn = "*"
 scipy = "*"
-numpy - "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
