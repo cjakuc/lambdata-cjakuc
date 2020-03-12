@@ -25,7 +25,7 @@ class DfFancy(pd.DataFrame):
         """
         rows = []
         i = 0
-        while i < (len(self.columns)-1):
+        while i < (len(self.columns) - 1):
             rows.append([])
             i += 1
         for row in range(0, rows_to_add):

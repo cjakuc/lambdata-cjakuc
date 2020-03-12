@@ -27,5 +27,3 @@ df_fancy.generate_data(rows_to_add=2)
 
 # Check the shape to see if it changed correctly
 print(df_fancy.shape)
-
-
